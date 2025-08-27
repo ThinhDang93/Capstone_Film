@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../template/Navbar";
+import Banner from "./ComponentHome/CarouselBannerr";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Navbar />
+      <Banner />
+    </>
+  );
+};
 
-export default Home
+export default Home;
