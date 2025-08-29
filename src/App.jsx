@@ -10,6 +10,8 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Detail from "./Pages/Detail/Detail";
+import Booking from "./Pages/Booking/Booking";
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -20,6 +22,12 @@ const App = () => {
           <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
           <Routes>
             <Route path="" element={<Home />}></Route>
+            <Route path="detail">
+              <Route path=":maPhim" element={<Detail />}></Route>
+            </Route>
+            <Route path="booking">
+              <Route path=":maLichChieu" element={<Booking />}></Route>
+            </Route>
           </Routes>
         </QueryClientProvider>
       </Provider>
